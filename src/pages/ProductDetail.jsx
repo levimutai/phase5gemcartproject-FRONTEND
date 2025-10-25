@@ -40,7 +40,7 @@ function ProductDetail() {
     const jewelryImages = {
       'Rings': [
         'https://i.pinimg.com/736x/6e/0d/dd/6e0ddd9590f6d49a68e5b7b097c222cf.jpg',
-        'https://i.pinimg.com/736x/59/38/bd/5938bd06b009d904002b5c27f50d9482.jpg',
+        'https://i.pinimg.com/1200x/66/31/94/663194433984d1c9a6e62b2005194949.jpg',
         'https://i.pinimg.com/736x/93/e0/44/93e04420005de989328f04bff698c237.jpg',
         'https://i.pinimg.com/736x/d0/ea/fa/d0eafad1dc3eadc1bd9405e56f1c7b70.jpg'
       ],

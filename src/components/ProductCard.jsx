@@ -23,7 +23,7 @@ function ProductCard({ product }) {
     const jewelryImages = {
       'Rings': [
         'https://i.pinimg.com/736x/6e/0d/dd/6e0ddd9590f6d49a68e5b7b097c222cf.jpg',
-        'https://i.pinimg.com/736x/59/38/bd/5938bd06b009d904002b5c27f50d9482.jpg',
+        'https://i.pinimg.com/1200x/66/31/94/663194433984d1c9a6e62b2005194949.jpg',
         'https://i.pinimg.com/736x/93/e0/44/93e04420005de989328f04bff698c237.jpg',
         'https://i.pinimg.com/736x/d0/ea/fa/d0eafad1dc3eadc1bd9405e56f1c7b70.jpg'
       ],
@@ -46,16 +46,10 @@ function ProductCard({ product }) {
         'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop&auto=format'
       ],
       'Bracelets': [
-        'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=400&fit=crop&auto=format'
-      ],
-      'Chains': [
-        'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&auto=format'
+        'https://i.pinimg.com/1200x/f8/24/e9/f824e9e970fbc6f11595b51f9bfde3c3.jpg',
+        'https://i.pinimg.com/736x/d6/b6/9f/d6b69f5318eb42d58e3812b16ff50a01.jpg',
+        'https://i.pinimg.com/1200x/d1/3d/12/d13d1243d6cdb6607832fc3123f63fe9.jpg',
+        'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=800&h=800&fit=crop&auto=format'
       ]
     };
     

@@ -8,7 +8,7 @@ const FeaturedCollection = () => {
       title: "Diamond Eternity Ring",
       price: 2850,
       originalPrice: 3200,
-      image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop",
+      image: "https://i.pinimg.com/736x/6e/0d/dd/6e0ddd9590f6d49a68e5b7b097c222cf.jpg",
       badge: "BESTSELLER",
       rating: 4.9
     },
@@ -17,7 +17,7 @@ const FeaturedCollection = () => {
       title: "Pearl Elegance Necklace",
       price: 1250,
       originalPrice: 1450,
-      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop",
+      image: "https://i.pinimg.com/1200x/d9/3f/10/d93f107c2415cdf0595e54d05b36a5ed.jpg",
       badge: "NEW",
       rating: 4.8
     },
@@ -26,16 +26,16 @@ const FeaturedCollection = () => {
       title: "Swiss Luxury Watch",
       price: 3500,
       originalPrice: 4000,
-      image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop",
+      image: "https://i.pinimg.com/736x/70/a3/97/70a39735cff667be25113d6becab4bda.jpg",
       badge: "LIMITED",
       rating: 5.0
     },
     {
       id: 4,
-      title: "Gold Drop Earrings",
+      title: "Silver Bracelet",
       price: 850,
       originalPrice: 950,
-      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop",
+      image: "https://i.pinimg.com/1200x/66/31/94/663194433984d1c9a6e62b2005194949.jpg",
       badge: "TRENDING",
       rating: 4.7
     }
