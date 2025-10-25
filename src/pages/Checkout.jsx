@@ -50,14 +50,14 @@ function Checkout() {
     return (
       <div className="container mx-auto p-8 text-center">
         <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
-          <div className="text-6xl mb-4">🛍️</div>
+          <div className="text-6xl mb-4"></div>
           <h2 className="text-3xl font-serif font-bold mb-4">Your cart is empty</h2>
           <p className="text-gray-600 mb-6">Add some beautiful jewelry to get started!</p>
           <button 
             onClick={() => navigate('/products')}
             className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-lg font-serif font-semibold hover:from-yellow-600 hover:to-yellow-700 transition-all"
           >
-            🛍️ Continue Shopping
+             Continue Shopping
           </button>
         </div>
       </div>
@@ -68,14 +68,14 @@ function Checkout() {
     return (
       <div className="container mx-auto p-8 text-center">
         <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
-          <div className="text-6xl mb-4">✅</div>
+          <div className="text-6xl mb-4"></div>
           <h2 className="text-3xl font-bold mb-4 text-green-600">Payment Successful!</h2>
           <p className="text-gray-600 mb-6">Your order has been placed successfully. You will receive a confirmation SMS shortly.</p>
           <button 
             onClick={() => navigate('/products')}
             className="bg-gradient-to-r from-teal-600 to-teal-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-teal-700 hover:to-teal-800 transition-all"
           >
-            🛍️ Continue Shopping
+             Continue Shopping
           </button>
         </div>
       </div>
@@ -84,13 +84,13 @@ function Checkout() {
 
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8">🔒 Secure Checkout</h1>
+      <h1 className="text-4xl font-bold mb-8"> Secure Checkout</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           {step === 1 && (
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h2 className="text-2xl font-bold mb-6">📦 Shipping Information</h2>
+              <h2 className="text-2xl font-bold mb-6"> Shipping Information</h2>
               <form onSubmit={handleShippingSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -196,7 +196,7 @@ function Checkout() {
                   disabled={loading}
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-bold hover:from-green-700 hover:to-green-800 transition-all disabled:opacity-50"
                 >
-                  {loading ? '⏳ Processing Payment...' : `📱 Pay KSH ${(parseFloat(cartTotal) * 110).toFixed(0)} with M-Pesa`}
+                  {loading ? ' Processing Payment...' : `📱 Pay KSH ${(parseFloat(cartTotal) * 110).toFixed(0)} with M-Pesa`}
                 </button>
               </form>
               
@@ -211,7 +211,7 @@ function Checkout() {
         </div>
         
         <div className="bg-white p-6 rounded-xl shadow-lg h-fit">
-          <h3 className="text-2xl font-bold mb-4">📋 Order Summary</h3>
+          <h3 className="text-2xl font-bold mb-4"> Order Summary</h3>
           <div className="space-y-3 mb-4">
             {cartState.items.map(item => (
               <div key={item.id} className="flex justify-between text-sm">

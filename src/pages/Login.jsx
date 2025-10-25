@@ -12,32 +12,44 @@ function Login() {
   const { dispatch } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
     
-    try {
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      
-      const data = await res.json();
-      
-      if (res.ok) {
-        if (isLogin) {
-          dispatch({ type: 'LOGIN', payload: { token: data.access_token, user: data.user } });
-          navigate('/products');
-        } else {
-          alert('Registration successful! Please login.');
-          setIsLogin(true);
-        }
+    if (isLogin) {
+      // Demo login - check test credentials
+      if (formData.email === 'seller@gemcart.com' && formData.password === 'password') {
+        const user = {
+          id: 1,
+          username: 'Seller',
+          email: 'seller@gemcart.com',
+          is_seller: true
+        };
+        dispatch({ type: 'LOGIN', payload: { token: 'demo-token', user } });
+        alert('Login successful!');
+        navigate('/products');
+      } else if (formData.email && formData.password) {
+        // Allow any email/password for demo
+        const user = {
+          id: 2,
+          username: formData.email.split('@')[0],
+          email: formData.email,
+          is_seller: false
+        };
+        dispatch({ type: 'LOGIN', payload: { token: 'demo-token', user } });
+        alert('Login successful!');
+        navigate('/products');
       } else {
-        alert(data.error || 'Authentication failed');
+        alert('Please enter email and password');
       }
-    } catch (err) {
-      alert('Network error');
+    } else {
+      // Registration
+      if (formData.username && formData.email && formData.password) {
+        alert('Registration successful! Please login.');
+        setIsLogin(true);
+        setFormData({ username: '', email: formData.email, password: '' });
+      } else {
+        alert('Please fill all fields');
+      }
     }
   };
 

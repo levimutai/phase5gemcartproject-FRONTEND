@@ -5,31 +5,28 @@ import { sampleProducts } from '../data/sampleProducts';
 
 function Products() {
     const [products, setProducts] = useState([]);
-    const [categories, setCategories] = useState([]);
+
     const [loading, setLoading] = useState(true);
     const location = useLocation();
     const urlParams = new URLSearchParams(location.search);
     const [filters, setFilters] = useState({
-        search: '',
-        category: urlParams.get('category') || '',
-        sort: '',
-        minPrice: '',
-        maxPrice: ''
+        search: urlParams.get('search') || '',
+        category: urlParams.get('category') || ''
     });
 
     useEffect(() => {
-        const urlCategory = urlParams.get('category');
-        if (urlCategory && urlCategory !== filters.category) {
-            setFilters(prev => ({ ...prev, category: urlCategory }));
-        }
+        const newUrlParams = new URLSearchParams(location.search);
+        const urlCategory = newUrlParams.get('category') || '';
+        const urlSearch = newUrlParams.get('search') || '';
+        
+        setFilters(prev => ({
+            ...prev,
+            category: urlCategory,
+            search: urlSearch
+        }));
     }, [location.search]);
 
     useEffect(() => {
-        fetchProducts();
-        fetchCategories();
-    }, [filters]);
-
-    const fetchProducts = () => {
         // Use sample data for demonstration
         let filteredProducts = [...sampleProducts];
         
@@ -46,36 +43,11 @@ function Products() {
             );
         }
         
-        if (filters.minPrice) {
-            filteredProducts = filteredProducts.filter(product => 
-                parseFloat(product.price) >= parseFloat(filters.minPrice)
-            );
-        }
-        
-        if (filters.maxPrice) {
-            filteredProducts = filteredProducts.filter(product => 
-                parseFloat(product.price) <= parseFloat(filters.maxPrice)
-            );
-        }
-        
-        // Apply sorting
-        if (filters.sort === 'price_asc') {
-            filteredProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-        } else if (filters.sort === 'price_desc') {
-            filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-        } else if (filters.sort === 'name_asc') {
-            filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
-        }
-        
         setProducts(filteredProducts);
         setLoading(false);
-    };
+    }, [filters]);
 
-    const fetchCategories = () => {
-        // Extract unique categories from sample data
-        const uniqueCategories = [...new Set(sampleProducts.map(product => product.categories[0].name))];
-        setCategories(uniqueCategories.map(name => ({ name })));
-    };
+
 
     const handleFilterChange = (key, value) => {
         setFilters(prev => ({ ...prev, [key]: value }));
@@ -85,7 +57,7 @@ function Products() {
     if (loading) return (
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
             <div className="text-center">
-                <div className="animate-spin text-6xl mb-4">💎</div>
+                <div className="animate-spin text-6xl mb-4"></div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">Loading Luxury Collection</h2>
                 <p className="text-gray-600">Discovering exquisite pieces for you...</p>
             </div>
@@ -97,19 +69,19 @@ function Products() {
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white py-16">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-5xl font-bold mb-4">💎 Luxury Jewelry Collection</h1>
-                    <p className="text-xl text-gray-300 mb-8">🌟 Discover Exquisite Pieces Crafted to Perfection</p>
+                    <h1 className="text-5xl font-bold mb-4"> Luxury Jewelry Collection</h1>
+                    <p className="text-xl text-gray-300 mb-8"> Discover Exquisite Pieces Crafted to Perfection</p>
                     <div className="flex justify-center gap-8 text-sm">
                         <div className="flex items-center gap-2">
                             <span>🎆</span>
                             <span>Free Worldwide Shipping</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span>🔒</span>
+                            <span></span>
                             <span>Secure Payment</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span>✨</span>
+                            <span></span>
                             <span>Lifetime Warranty</span>
                         </div>
                     </div>
@@ -119,7 +91,7 @@ function Products() {
             <div className="container mx-auto p-6">
                 {/* Quick Category Filter */}
                 <div className="flex flex-wrap justify-center gap-4 mb-8">
-                    {['All', 'Rings', 'Necklaces', 'Watches', 'Earrings', 'Bracelets', 'Chains'].map((cat, index) => {
+                    {['All', 'Rings', 'Necklaces', 'Watches', 'Bracelets'].map((cat, index) => {
                         const colors = [
                             'from-purple-500 to-pink-500',
                             'from-blue-500 to-cyan-500', 
@@ -132,89 +104,52 @@ function Products() {
                         return (
                         <button
                             key={cat}
-                            onClick={() => handleFilterChange('category', cat === 'All' ? '' : cat)}
+                            onClick={() => {
+                                if (cat === 'All') {
+                                    handleFilterChange('search', 'new');
+                                } else {
+                                    handleFilterChange('category', cat);
+                                }
+                            }}
                             className={`px-6 py-3 rounded-full font-serif font-semibold transition-all duration-300 ${
-                                (cat === 'All' && !filters.category) || filters.category === cat
+                                (cat === 'All' && filters.search === 'new') || filters.category === cat
                                     ? `bg-gradient-to-r ${colors[index]} text-white shadow-lg transform scale-105`
                                     : 'bg-white text-gray-700 hover:bg-gradient-to-r hover:from-pink-100 hover:to-purple-100 hover:text-purple-600 shadow-md'
                             }`}
                         >
-                            {cat === 'All' ? '🏷️ All' : 
+                            {cat === 'All' ? '🆕 New Arrivals' : 
                              cat === 'Rings' ? '💍 Rings' :
                              cat === 'Necklaces' ? '💿 Necklaces' :
                              cat === 'Watches' ? '⌚ Watches' :
-                             cat === 'Earrings' ? '👂 Earrings' :
-                             cat === 'Bracelets' ? '📝 Bracelets' :
-                             '🔗 Chains'}
+                             '📝 Bracelets'}
                         </button>
                     )})}
                 </div>
                 
-                {/* Advanced Filters */}
-                <div className="bg-white p-6 rounded-2xl shadow-lg mb-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                        <div className="relative">
-                            <input
-                                type="text"
-                                placeholder="Search jewelry..."
-                                value={filters.search}
-                                onChange={(e) => handleFilterChange('search', e.target.value)}
-                                className="w-full p-4 pl-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                            />
-                            <span className="absolute left-4 top-4 text-gray-400">🔍</span>
-                        </div>
-                        
-                        <div className="flex gap-2">
-                            <input
-                                type="number"
-                                placeholder="Min $"
-                                value={filters.minPrice}
-                                onChange={(e) => handleFilterChange('minPrice', e.target.value)}
-                                className="flex-1 p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                            />
-                            <input
-                                type="number"
-                                placeholder="Max $"
-                                value={filters.maxPrice}
-                                onChange={(e) => handleFilterChange('maxPrice', e.target.value)}
-                                className="flex-1 p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                            />
-                        </div>
-                        
-                        <select
-                            value={filters.sort}
-                            onChange={(e) => handleFilterChange('sort', e.target.value)}
-                            className="p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                        >
-                            <option value="">Sort By</option>
-                            <option value="price_asc">Price: Low to High</option>
-                            <option value="price_desc">Price: High to Low</option>
-                            <option value="name_asc">Name: A to Z</option>
-                        </select>
-                        
-                        <div className="flex items-center justify-between bg-gray-50 p-4 rounded-xl">
-                            <span className="text-gray-600 font-medium">{products.length} Products</span>
-                            <button className="text-teal-600 hover:text-teal-700 font-semibold">
-                                📋 View Grid
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
                 
                 {/* Products Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    {products.map(product => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
-                </div>
+                {filters.category === '' && filters.search !== 'new' && filters.search === '' ? (
+                    <div className="text-center py-16">
+                        <div className="text-6xl mb-4">💎</div>
+                        <h3 className="text-2xl font-bold text-gray-800 mb-2">Welcome to Our Collection</h3>
+                        <p className="text-gray-500 mb-6">Click on "New Arrivals" above to browse our latest jewelry</p>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        {products.map(product => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                )}
                 
-                {products.length === 0 && (
+                {products.length === 0 && (filters.search || filters.category) && (
                     <div className="text-center py-16">
                         <div className="text-6xl mb-4">🔍</div>
                         <h3 className="text-2xl font-bold text-gray-800 mb-2">No products found</h3>
-                        <p className="text-gray-500 mb-6">Try adjusting your search or filters</p>
+                        <p className="text-gray-500 mb-6">Try adjusting your search or category</p>
                         <button 
-                            onClick={() => setFilters({search: '', category: '', sort: '', minPrice: '', maxPrice: ''})}
+                            onClick={() => setFilters({search: '', category: ''})}
                             className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all font-serif font-semibold"
                         >
                             Clear All Filters

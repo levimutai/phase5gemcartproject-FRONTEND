@@ -22,22 +22,22 @@ function ProductCard({ product }) {
   const getJewelryImage = () => {
     const jewelryImages = {
       'Rings': [
-        'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1603561596112-db1d9d1c95d0?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1584302179602-e4819bb92daa?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?w=400&h=400&fit=crop&auto=format'
+        'https://i.pinimg.com/736x/6e/0d/dd/6e0ddd9590f6d49a68e5b7b097c222cf.jpg',
+        'https://i.pinimg.com/736x/59/38/bd/5938bd06b009d904002b5c27f50d9482.jpg',
+        'https://i.pinimg.com/736x/93/e0/44/93e04420005de989328f04bff698c237.jpg',
+        'https://i.pinimg.com/736x/d0/ea/fa/d0eafad1dc3eadc1bd9405e56f1c7b70.jpg'
       ],
       'Necklaces': [
-        'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=400&fit=crop&auto=format'
+        'https://i.pinimg.com/1200x/d9/3f/10/d93f107c2415cdf0595e54d05b36a5ed.jpg',
+        'https://i.pinimg.com/736x/8d/f8/7b/8df87bab3251409450178d2c10b766b4.jpg',
+        'https://i.pinimg.com/1200x/b8/21/70/b821709eabdd8339759a4638f73abc89.jpg',
+        'https://i.pinimg.com/736x/00/02/1b/00021bf83e1babbed73c1c52744e807d.jpg'
       ],
       'Watches': [
-        'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400&h=400&fit=crop&auto=format',
-        'https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=400&h=400&fit=crop&auto=format'
+        'https://i.pinimg.com/736x/70/a3/97/70a39735cff667be25113d6becab4bda.jpg',
+        'https://i.pinimg.com/736x/b8/8b/72/b88b72997a214eaca116e60913da4d5d.jpg',
+        'https://i.pinimg.com/1200x/90/f3/3d/90f33db7d190e102b3bf704f8ba221eb.jpg',
+        'https://i.pinimg.com/1200x/fb/2b/16/fb2b167077a623d20a59f36e11610552.jpg'
       ],
       'Earrings': [
         'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop&auto=format',
@@ -140,7 +140,7 @@ function ProductCard({ product }) {
         <button
           onClick={handleAddToCart}
           disabled={product.inventory_count === 0}
-          className="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white py-3 rounded-xl hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600 transition-all duration-300 font-serif font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed transform hover:scale-105 shadow-lg"
+          className="w-full bg-white text-black border-2 border-black py-3 rounded-xl hover:bg-black hover:text-white transition-all duration-300 font-serif font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed transform hover:scale-105 shadow-lg"
         >
           {product.inventory_count > 0 ? '🛍️ Add to Cart' : '❌ Out of Stock'}
         </button>

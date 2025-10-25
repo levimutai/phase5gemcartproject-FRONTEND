@@ -1,14 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
   const { state, dispatch } = useAuth();
   const { state: cartState, cartTotal } = useCart();
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
   
   const handleLogout = () => {
     dispatch({ type: 'LOGOUT' });
+  };
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter' && searchTerm.trim()) {
+      navigate(`/products?search=${encodeURIComponent(searchTerm.trim())}`);
+    }
   };
 
   return (
@@ -18,6 +26,17 @@ const Navbar = () => {
           💎 GemCart
         </Link>
         <nav className="space-x-8 flex items-center" role="navigation" aria-label="Main navigation">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search jewelry..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={handleSearch}
+              className="w-64 px-4 py-2 pl-10 border border-blue-200 rounded-full focus:ring-2 focus:ring-blue-400 focus:border-transparent bg-white/90"
+            />
+            <span className="absolute left-3 top-2.5 text-blue-400">🔍</span>
+          </div>
           <Link to="/products" className="hover:text-blue-600 transition-colors font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white rounded px-2 py-1" aria-label="Shop products">
             🛍️ Shop
           </Link>

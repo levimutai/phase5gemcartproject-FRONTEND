@@ -24,7 +24,7 @@ const Footer = () => {
               <li><Link to="/products" className="text-blue-700 hover:text-blue-500 transition-colors font-light">New Arrivals</Link></li>
               <li><Link to="/products?category=Rings" className="text-blue-700 hover:text-blue-500 transition-colors font-light">💍 Rings</Link></li>
               <li><Link to="/products?category=Necklaces" className="text-blue-700 hover:text-blue-500 transition-colors font-light">📿 Necklaces</Link></li>
-              <li><Link to="/products?category=Earrings" className="text-blue-700 hover:text-blue-500 transition-colors font-light">👂 Earrings</Link></li>
+
               <li><Link to="/products?category=Bracelets" className="text-blue-700 hover:text-blue-500 transition-colors font-light">💝 Bracelets</Link></li>
               <li><Link to="/products?category=Watches" className="text-blue-700 hover:text-blue-500 transition-colors font-light">⌚ Watches</Link></li>
             </ul>

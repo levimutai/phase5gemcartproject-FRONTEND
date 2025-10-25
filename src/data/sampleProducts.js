@@ -2,69 +2,69 @@ export const sampleProducts = [
   // Rings
   {
     id: 1,
-    title: "Diamond Solitaire Engagement Ring",
-    price: 2499.99,
+    title: "Vintage Rose Gold Engagement Ring",
+    price: 3299.99,
     categories: [{ name: "Rings" }],
     inventory_count: 15,
-    description: "Classic 1-carat diamond solitaire in 18k white gold"
+    description: "Exquisite vintage-style engagement ring with ornate rose gold detailing"
   },
   {
     id: 2,
-    title: "Vintage Rose Gold Band",
-    price: 399.99,
+    title: "Classic Diamond Solitaire Ring",
+    price: 4599.99,
     categories: [{ name: "Rings" }],
     inventory_count: 25,
-    description: "Elegant vintage-inspired rose gold wedding band"
+    description: "Timeless diamond solitaire in elegant white gold setting"
   },
   {
     id: 3,
-    title: "Platinum Eternity Ring",
-    price: 5999.99,
+    title: "Art Deco Emerald Cut Ring",
+    price: 2899.99,
     categories: [{ name: "Rings" }],
     inventory_count: 8,
-    description: "Luxurious platinum eternity ring with diamonds"
+    description: "Stunning art deco style ring with emerald cut center stone"
   },
   {
     id: 4,
-    title: "Silver Promise Ring",
-    price: 149.99,
+    title: "Delicate Halo Diamond Ring",
+    price: 1899.99,
     categories: [{ name: "Rings" }],
     inventory_count: 50,
-    description: "Simple sterling silver promise ring"
+    description: "Beautiful halo setting with sparkling diamonds surrounding center stone"
   },
 
   // Necklaces
   {
     id: 5,
-    title: "Pearl Strand Necklace",
-    price: 899.99,
+    title: "Layered Gold Chain Necklace",
+    price: 1299.99,
     categories: [{ name: "Necklaces" }],
     inventory_count: 20,
-    description: "Classic freshwater pearl strand necklace"
+    description: "Elegant layered gold chain necklace with delicate pendant details"
   },
   {
     id: 6,
-    title: "Diamond Tennis Necklace",
-    price: 7500.00,
+    title: "Pearl Drop Statement Necklace",
+    price: 2199.99,
     categories: [{ name: "Necklaces" }],
     inventory_count: 5,
-    description: "Stunning diamond tennis necklace in white gold"
+    description: "Luxurious pearl drop necklace with ornate gold detailing"
   },
   {
     id: 7,
-    title: "Gold Chain Necklace",
-    price: 299.99,
+    title: "Vintage Coin Pendant Necklace",
+    price: 899.99,
     categories: [{ name: "Necklaces" }],
     inventory_count: 35,
-    description: "14k gold chain necklace, perfect for layering"
+    description: "Vintage-inspired coin pendant on delicate gold chain"
   },
   {
     id: 8,
-    title: "Emerald Pendant Necklace",
-    price: 1299.99,
+    title: "Multi-Strand Pearl Necklace",
+    price: 1799.99,
     categories: [{ name: "Necklaces" }],
     inventory_count: 12,
-    description: "Elegant emerald pendant in yellow gold setting"
+    description: "Classic multi-strand pearl necklace with elegant clasp"
   },
 
   // Watches
@@ -101,64 +101,33 @@ export const sampleProducts = [
     description: "Timeless stainless steel watch"
   },
 
-  // Earrings
-  {
-    id: 13,
-    title: "Diamond Stud Earrings",
-    price: 1599.99,
-    categories: [{ name: "Earrings" }],
-    inventory_count: 22,
-    description: "Classic diamond stud earrings in white gold"
-  },
-  {
-    id: 14,
-    title: "Pearl Drop Earrings",
-    price: 449.99,
-    categories: [{ name: "Earrings" }],
-    inventory_count: 30,
-    description: "Elegant pearl drop earrings"
-  },
-  {
-    id: 15,
-    title: "Ruby Chandelier Earrings",
-    price: 3299.99,
-    categories: [{ name: "Earrings" }],
-    inventory_count: 6,
-    description: "Stunning ruby chandelier earrings"
-  },
-  {
-    id: 16,
-    title: "Silver Hoop Earrings",
-    price: 89.99,
-    categories: [{ name: "Earrings" }],
-    inventory_count: 45,
-    description: "Simple sterling silver hoop earrings"
-  },
-
   // Bracelets
   {
     id: 17,
-    title: "Tennis Bracelet",
-    price: 2899.99,
+    title: "Elegant Pearl Chain Bracelet",
+    price: 1899.99,
     categories: [{ name: "Bracelets" }],
     inventory_count: 14,
-    description: "Classic diamond tennis bracelet"
+    description: "Sophisticated pearl and gold chain bracelet with delicate charm details",
+    image_url: "https://i.pinimg.com/1200x/f8/24/e9/f824e9e970fbc6f11595b51f9bfde3c3.jpg"
   },
   {
     id: 18,
-    title: "Gold Charm Bracelet",
-    price: 699.99,
+    title: "Vintage Gold Link Bracelet",
+    price: 1299.99,
     categories: [{ name: "Bracelets" }],
     inventory_count: 25,
-    description: "14k gold charm bracelet with heart charm"
+    description: "Timeless vintage-style gold link bracelet with intricate detailing",
+    image_url: "https://i.pinimg.com/736x/d6/b6/9f/d6b69f5318eb42d58e3812b16ff50a01.jpg"
   },
   {
     id: 19,
-    title: "Sapphire Link Bracelet",
-    price: 4199.99,
+    title: "Luxury Diamond Tennis Bracelet",
+    price: 3299.99,
     categories: [{ name: "Bracelets" }],
     inventory_count: 9,
-    description: "Luxury sapphire and diamond link bracelet"
+    description: "Exquisite diamond tennis bracelet with premium setting",
+    image_url: "https://i.pinimg.com/1200x/d1/3d/12/d13d1243d6cdb6607832fc3123f63fe9.jpg"
   },
   {
     id: 20,
@@ -169,37 +138,5 @@ export const sampleProducts = [
     description: "Set of three sterling silver bangles"
   },
 
-  // Chains
-  {
-    id: 21,
-    title: "Cuban Link Chain",
-    price: 1299.99,
-    categories: [{ name: "Chains" }],
-    inventory_count: 16,
-    description: "Heavy 14k gold Cuban link chain"
-  },
-  {
-    id: 22,
-    title: "Rope Chain Necklace",
-    price: 799.99,
-    categories: [{ name: "Chains" }],
-    inventory_count: 20,
-    description: "Classic gold rope chain necklace"
-  },
-  {
-    id: 23,
-    title: "Diamond Cut Chain",
-    price: 2199.99,
-    categories: [{ name: "Chains" }],
-    inventory_count: 11,
-    description: "Sparkling diamond-cut gold chain"
-  },
-  {
-    id: 24,
-    title: "Silver Box Chain",
-    price: 159.99,
-    categories: [{ name: "Chains" }],
-    inventory_count: 35,
-    description: "Sleek sterling silver box chain"
-  }
+
 ];
