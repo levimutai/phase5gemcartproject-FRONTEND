@@ -104,8 +104,7 @@ function ProductDetail() {
                 />
             </div>
             
-           
- <button
+            <button
                 onClick={handleAddToCart}
                 disabled={product.inventory_count <= 0}
                 className="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold py-4 px-6 rounded-xl text-xl hover:from-teal-700 hover:to-teal-800 transition-all duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed transform hover:scale-105"

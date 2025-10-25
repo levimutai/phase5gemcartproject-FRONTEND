@@ -102,8 +102,7 @@ function Products() {
                     <div className="flex justify-center gap-8 text-sm">
                         <div className="flex items-center gap-2">
                             <span>🎆</span>
-  
-                          <span>Free Worldwide Shipping</span>
+                            <span>Free Worldwide Shipping</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span>🔒</span>
