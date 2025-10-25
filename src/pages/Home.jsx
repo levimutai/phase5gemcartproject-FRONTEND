@@ -12,7 +12,7 @@ const Home = () => (
       }}
     >
       <div className="text-center text-white px-4">
-        <h1 className="text-7xl font-serif font-extrabold mb-6 drop-shadow-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        <h1 className="text-7xl font-serif font-extrabold mb-6 drop-shadow-2xl bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
           ✨ GemCart ✨
         </h1>
         <p className="text-3xl mb-8 font-elegant font-light drop-shadow-lg">
@@ -21,7 +21,7 @@ const Home = () => (
 
         <Link 
           to="/products" 
-          className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-12 py-4 rounded-full text-xl font-bold hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105 shadow-2xl"
+          className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 text-white px-12 py-4 rounded-full text-xl font-bold hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-2xl"
         >
           🛍️ Explore Collection
         </Link>
@@ -36,13 +36,13 @@ const Home = () => (
 
 
     {/* CTA Section */}
-    <div className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <div className="py-20 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-900">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-5xl font-serif font-bold mb-6">Ready to Find Your Perfect Piece?</h2>
-        <p className="text-xl mb-8 text-gray-300">Browse our exclusive collection of luxury jewelry and timepieces</p>
+        <p className="text-xl mb-8 text-blue-700">Browse our exclusive collection of luxury jewelry and timepieces</p>
         <Link 
           to="/products" 
-          className="inline-block bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-12 py-4 rounded-full text-xl font-serif font-bold hover:from-yellow-600 hover:to-yellow-700 transition-all transform hover:scale-105 shadow-2xl"
+          className="inline-block bg-gradient-to-r from-blue-500 to-blue-600 text-white px-12 py-4 rounded-full text-xl font-serif font-bold hover:from-blue-600 hover:to-blue-700 transition-all transform hover:scale-105 shadow-2xl"
         >
           🛍️ Start Shopping Now
         </Link>

@@ -12,17 +12,17 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-purple-900 via-pink-800 to-indigo-900 text-white p-4 shadow-2xl" role="banner">
+    <header className="bg-gradient-to-r from-white via-blue-50 to-blue-100 text-blue-900 p-4 shadow-2xl" role="banner">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-3xl font-serif font-bold hover:text-pink-300 transition-colors bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-purple-900 rounded" aria-label="GemCart - Home">
+        <Link to="/" className="text-3xl font-serif font-bold hover:text-blue-600 transition-colors bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 bg-clip-text text-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white rounded" aria-label="GemCart - Home">
           💎 GemCart
         </Link>
         <nav className="space-x-8 flex items-center" role="navigation" aria-label="Main navigation">
-          <Link to="/products" className="hover:text-pink-300 transition-colors font-medium text-lg focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-purple-900 rounded px-2 py-1" aria-label="Shop products">
+          <Link to="/products" className="hover:text-blue-600 transition-colors font-medium text-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white rounded px-2 py-1" aria-label="Shop products">
             🛍️ Shop
           </Link>
-          <Link to="/cart" className="relative focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-purple-900 rounded" aria-label={`Shopping cart with ${cartState.items.length} items, total $${cartTotal}`}>
-            <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 px-4 py-2 rounded-full text-sm font-bold hover:from-pink-600 hover:via-purple-600 hover:to-cyan-600 transition-all cursor-pointer text-white">
+          <Link to="/cart" className="relative focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white rounded" aria-label={`Shopping cart with ${cartState.items.length} items, total $${cartTotal}`}>
+            <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 px-4 py-2 rounded-full text-sm font-bold hover:from-blue-600 hover:via-blue-500 hover:to-blue-700 transition-all cursor-pointer text-white">
               🛍️ Cart ({cartState.items.length}) - ${cartTotal}
             </span>
             {cartState.items.length > 0 && (
@@ -33,18 +33,18 @@ const Navbar = () => {
           </Link>
           {state.isAuthenticated ? (
             <>
-              <span className="text-pink-300 font-medium" role="status" aria-live="polite">👤 Hello, {state.user.username}</span>
+              <span className="text-blue-600 font-medium" role="status" aria-live="polite">👤 Hello, {state.user.username}</span>
               {state.user.is_seller && (
-                <span className="bg-gradient-to-r from-emerald-400 to-teal-500 text-white px-3 py-1 rounded-full text-xs font-bold" role="status">
+                <span className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold" role="status">
                   👑 SELLER
                 </span>
               )}
-              <button onClick={handleLogout} className="hover:text-red-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1" aria-label="Logout from account">
+              <button onClick={handleLogout} className="hover:text-red-500 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-white rounded px-2 py-1" aria-label="Logout from account">
                 🚪 Logout
               </button>
             </>
           ) : (
-            <Link to="/login" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-full transition-all font-semibold transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-purple-900" aria-label="Login to your account">
+            <Link to="/login" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-2 rounded-full transition-all font-semibold transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white" aria-label="Login to your account">
               🔑 Login
             </Link>
           )}

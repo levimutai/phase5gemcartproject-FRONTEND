@@ -95,7 +95,7 @@ function Products() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
             {/* Hero Section */}
-            <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-500 text-white py-16">
+            <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white py-16">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-5xl font-bold mb-4">💎 Luxury Jewelry Collection</h1>
                     <p className="text-xl text-gray-300 mb-8">🌟 Discover Exquisite Pieces Crafted to Perfection</p>
@@ -215,7 +215,7 @@ function Products() {
                         <p className="text-gray-500 mb-6">Try adjusting your search or filters</p>
                         <button 
                             onClick={() => setFilters({search: '', category: '', sort: '', minPrice: '', maxPrice: ''})}
-                            className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all font-serif font-semibold"
+                            className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all font-serif font-semibold"
                         >
                             Clear All Filters
                         </button>
