@@ -1,8 +1,8 @@
-# 💎 GemCart Frontend
+# GemCart Frontend
 
 Modern React-based frontend application for the GemCart luxury jewelry e-commerce platform.
 
-## 🚀 Getting Started
+## Getting Started
 
 ```bash
 npm install
@@ -11,66 +11,53 @@ npm start
 
 **App URL:** http://localhost:3000
 
-## ✨ Features
+## Features
 
-- 🛍️ Product browsing with categories
-- 🛒 Shopping cart functionality  
-- 🔐 User authentication
-- 💳 M-Pesa checkout integration
-- 📱 Mobile responsive design
-- ⭐ Featured collection showcase
+1. Product browsing with categories
+2. Shopping cart functionality  
+3. User authentication
+4. M-Pesa checkout integration
+5. Mobile responsive design
+6. Featured collection showcase
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **React 18** - UI framework
-- **React Router** - Navigation
-- **Tailwind CSS** - Styling
-- **Context API** - State management
+1. **React 18** - UI framework
+2. **React Router** - Navigation
+3. **Tailwind CSS** - Styling
+4. **Context API** - State management
 
-## 🔧 Environment Variables
+## Environment Variables
 
 ```env
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_ENVIRONMENT=development
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
 ```
 
-## 🚀 Deployment
+## Deployment
 
-- **Netlify:** Connect GitHub repo
-- **Vercel:** `vercel --prod`
-- **Build:** `npm run build`
+1. **Netlify:** Connect GitHub repo
+2. **Vercel:** `vercel --prod`
+3. **Build:** `npm run build`
 
-## 👤 Test Account
+## Test Account
 
-- **Email:** seller@gemcart.com
-- **Password:** password
+1. **Email:** seller@gemcart.com
+2. **Password:** password
 
-## 📞 Contact
+## Contact
 
-- **Email:** mumtazmohamed453@gmail.com
-- **Phone:** 0729889585
+1. **Email:** mumtazmohamed453@gmail.com
+2. **Phone:** 0729889585
 
-## 📁 Project Structure
+## Color Theme
 
-```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── context/            # React Context providers
-├── data/               # Sample data
-├── App.jsx             # Main app component
-├── index.js            # Entry point
-└── index.css           # Global styles
-```
-
-## 🎨 Color Theme
-
-- **Primary:** White and Light Blue
-- **Accent:** Blue gradients
-- **Text:** Blue-900, Blue-700
+1. **Primary:** White and Light Blue
+2. **Accent:** Blue gradients
+3. **Text:** Blue-900, Blue-700
