@@ -1,8 +1,5 @@
 # Dependencies
 node_modules/
-backend/venv/
-backend/__pycache__/
-*.pyc
 
 # Environment variables
 .env
@@ -11,9 +8,7 @@ backend/__pycache__/
 .env.test.local
 .env.production.local
 
-# Database
-backend/*.db
-backend/instance/
+
 
 # Build outputs
 build/
