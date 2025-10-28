@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider, CartProvider } from './context';
 import { Navbar, Footer } from './components';
-import { Home, Products, ProductDetail, Login, Cart, Checkout } from './pages';
+import { Home, Products, ProductDetail, Login, Cart, Checkout, Profile } from './pages';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
               </Routes>
             </main>
             <Footer />

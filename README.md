@@ -1,4 +1,4 @@
-# GemCart Frontend
+# GemCart-Phase5-Project Frontend
 
 Modern React-based frontend application for the GemCart luxury jewelry e-commerce platform.
 

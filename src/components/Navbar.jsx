@@ -52,7 +52,7 @@ const Navbar = () => {
           </Link>
           {state.isAuthenticated ? (
             <>
-              <span className="text-blue-600 font-medium" role="status" aria-live="polite">👤 Hello, {state.user.username}</span>
+              <Link to="/profile" className="text-blue-600 font-medium hover:text-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white rounded px-2 py-1" role="status" aria-live="polite">👤 Hello, {state.user.username}</Link>
               {state.user.is_seller && (
                 <span className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold" role="status">
                   👑 SELLER
